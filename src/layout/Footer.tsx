@@ -1,29 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { Container } from "../components/_styledComponents/StyledContainer";
-import { SocialBlock } from "../components/socialBlock/SocialBlock";
+import { SocialMediaBlock } from "../components/socialMediaBlock/SocialMediaBlock";
 import imgLogo from "./../assets/icons/blackLogo.svg";
 import { LinkLogo } from "../components/logo/Logo";
 import { navItems } from "../components/navigation/_navigationData";
 import { Navigation } from "../components/navigation/Navigation";
-
-const socialItems = [
-  {
-    iconId: "socialGithub",
-    width: "30",
-    height: "30",
-  },
-  {
-    iconId: "socialTwit",
-    width: "30",
-    height: "30",
-  },
-  {
-    iconId: "socialLinkedIn",
-    width: "30",
-    height: "30",
-  },
-];
+import { SOCIAL_MEDIA_ITEMS } from "../data/socialMediaItems";
 
 export const Footer = () => {
   return (
@@ -35,7 +18,7 @@ export const Footer = () => {
             <a href="tel:+91 12345 09876">+91 12345 09876</a>
             <a href="mailto:info@example.com">info@example.com</a>
           </Contacts>
-          <SocialBlock socialItems={socialItems} />
+          <SocialMediaBlock socialMediaItems={SOCIAL_MEDIA_ITEMS} />
         </FooterTop>
 
         <FooterBottom>

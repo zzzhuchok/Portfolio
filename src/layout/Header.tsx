@@ -3,28 +3,11 @@ import styled from "styled-components";
 import { Container } from "../components/_styledComponents/StyledContainer";
 import { Navigation } from "../components/navigation/Navigation";
 import imgLogo from "./../assets/icons/colorLogo.svg";
-import { SocialBlock } from "../components/socialBlock/SocialBlock";
+import { SocialMediaBlock } from "../components/socialMediaBlock/SocialMediaBlock";
 import { LinkLogo } from "../components/logo/Logo";
 import { navItems } from "../components/navigation/_navigationData";
+import { SOCIAL_MEDIA_ITEMS } from "../data/socialMediaItems";
 
-
-const socialItems = [
-  {
-    iconId: "socialGithub",
-    width: "30",
-    height: "30",
-  },
-  {
-    iconId: "socialTwit",
-    width: "30",
-    height: "30",
-  },
-  {
-    iconId: "socialLinkedIn",
-    width: "30",
-    height: "30",
-  },
-];
 
 export const Header = () => {
   return (
@@ -33,7 +16,7 @@ export const Header = () => {
         <HeaderInner>
           <LinkLogo href="#" width="97" height="59" src={imgLogo} alt="logo"/>
           <Navigation navItems={navItems} />
-          <SocialBlock socialItems={socialItems} />
+          <SocialMediaBlock socialMediaItems={SOCIAL_MEDIA_ITEMS} />
         </HeaderInner>
       </Container>
     </StyledHeader>
