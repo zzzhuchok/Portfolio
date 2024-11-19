@@ -3,16 +3,17 @@ import styled from "styled-components";
 import { Container } from "../../../components/_styledComponents/StyledContainer";
 import { StyledSectionTitle } from "../../../components/_styledComponents/StyledSectionTitle";
 import { CardList } from "./CardList";
-import { projectCardsData } from "./_projectCardsData";
+import { PROJECT_CARD_DATA } from "./_projectCardsData";
+import { StyledSectionSubtitle } from "../../../components/_styledComponents/StyledSectionSubtitle";
 
 export const Projects = () => {
   return (
-    <ProjectSection>
+    <ProjectSection id="projects">
       <Container>
         <StyledSectionTitle>Projects</StyledSectionTitle>
-        <Subtitle>Things I’ve built so far</Subtitle>
+        <StyledSectionSubtitle>Things I’ve built so far</StyledSectionSubtitle>
         <ProjectCardsWrapper>
-          <CardList cardItems={projectCardsData} />
+          <CardList cardItems={PROJECT_CARD_DATA} />
         </ProjectCardsWrapper>
       </Container>
     </ProjectSection>
@@ -23,12 +24,6 @@ const ProjectSection = styled.section`
   ${StyledSectionTitle} {
     margin-bottom: 20px;
   }
-`;
-
-const Subtitle = styled.div`
-  font-size: ${(props) => props.theme.fontSize?.mediumS};
-  text-align: center;
-  margin-bottom: 50px;
 `;
 
 const ProjectCardsWrapper = styled.div`

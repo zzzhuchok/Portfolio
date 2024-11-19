@@ -1,22 +1,22 @@
-export const navItems = [
+export const NAVIGATION_LINKS = [
   {
     id: 0,
-    href: "##",
+    href: "#about",
     text: "About",
   },
   {
     id: 1,
-    href: "##",
+    href: "#techStack",
     text: "Tech Stack",
   },
   {
     id: 2,
-    href: "##",
+    href: "#projects",
     text: "Projects",
   },
   {
     id: 3,
-    href: "##",
+    href: "#contact",
     text: "Contact",
   },
 ];

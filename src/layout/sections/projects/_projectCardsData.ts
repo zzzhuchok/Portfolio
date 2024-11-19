@@ -1,4 +1,14 @@
-export const projectCardsData = [
+export type ProjectCardType = {
+  id?: number;
+  previewImg?: string;
+  title?: string;
+  description?: string;
+  techStack?: string;
+  previewLink?: string;
+  codeLink?: string;
+};
+
+export const PROJECT_CARD_DATA = [
   {
     id: 0,
     previewImg: "0.jpg",

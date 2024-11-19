@@ -1,8 +1,9 @@
 import React from "react";
-import { Card, CardPropsType } from "./Card";
+import { Card } from "./Card";
+import { ProjectCardType } from "./_projectCardsData";
 
 type CardListPropsType = {
-  cardItems: Array<CardPropsType>;
+  cardItems: Array<ProjectCardType>;
 };
 
 export const CardList = (props: CardListPropsType) => {

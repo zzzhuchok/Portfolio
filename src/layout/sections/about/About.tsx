@@ -6,7 +6,7 @@ import backgroundImg from "./../../../assets/img/Abstract.svg";
 
 export const About = () => {
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <Container>
         <AboutInner>
           <Title>
@@ -47,6 +47,11 @@ const Title = styled.h1`
 `;
 
 const AvatarWrapper = styled.div`
+  width: 350px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-image: linear-gradient(#e70faa 0%, #13b0f5 100%);
+  padding: 9px;
   position: relative;
   z-index: 1;
 

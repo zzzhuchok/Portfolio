@@ -4,7 +4,7 @@ import { Container } from "../../../components/_styledComponents/StyledContainer
 
 export const Contact = () => {
   return (
-    <StyledContact>
+    <StyledContact id="contact">
       <Container>
         <Title>For any questions please mail me:</Title>
         <Link href="mailto:zhuk.rostislav@gmai.com">

@@ -4,8 +4,8 @@ import { Container } from "../components/_styledComponents/StyledContainer";
 import { Navigation } from "../components/navigation/Navigation";
 import imgLogo from "./../assets/icons/colorLogo.svg";
 import { SocialMediaBlock } from "../components/socialMediaBlock/SocialMediaBlock";
-import { LinkLogo } from "../components/logo/Logo";
-import { navItems } from "../components/navigation/_navigationData";
+import { LinkLogo } from "../components/logo/LinkLogo";
+import { NAVIGATION_LINKS } from "../data/navigationLinks";
 import { SOCIAL_MEDIA_ITEMS } from "../data/socialMediaItems";
 
 
@@ -15,7 +15,7 @@ export const Header = () => {
       <Container>
         <HeaderInner>
           <LinkLogo href="#" width="97" height="59" src={imgLogo} alt="logo"/>
-          <Navigation navItems={navItems} />
+          <Navigation navItems={NAVIGATION_LINKS} />
           <SocialMediaBlock socialMediaItems={SOCIAL_MEDIA_ITEMS} />
         </HeaderInner>
       </Container>

@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { Container } from "../components/_styledComponents/StyledContainer";
 import { SocialMediaBlock } from "../components/socialMediaBlock/SocialMediaBlock";
 import imgLogo from "./../assets/icons/blackLogo.svg";
-import { LinkLogo } from "../components/logo/Logo";
-import { navItems } from "../components/navigation/_navigationData";
+import { LinkLogo } from "../components/logo/LinkLogo";
+import { NAVIGATION_LINKS } from "../data/navigationLinks";
 import { Navigation } from "../components/navigation/Navigation";
 import { SOCIAL_MEDIA_ITEMS } from "../data/socialMediaItems";
 
@@ -22,7 +22,7 @@ export const Footer = () => {
         </FooterTop>
 
         <FooterBottom>
-          <Navigation navItems={navItems} />
+          <Navigation navItems={NAVIGATION_LINKS} />
           <Signature>
             Designed and built by <span>zzzhuchok</span> with <span>Love</span>{" "}
             & <span>Coffee</span>

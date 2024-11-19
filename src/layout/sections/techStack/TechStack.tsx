@@ -3,31 +3,26 @@ import styled from "styled-components";
 import { Container } from "../../../components/_styledComponents/StyledContainer";
 import { StyledSectionTitle } from "../../../components/_styledComponents/StyledSectionTitle";
 import { SkillList } from "./SkillList";
+import { StyledSectionSubtitle } from "../../../components/_styledComponents/StyledSectionSubtitle";
 
 const imgItems = new Array(12).fill(1).map((el, index) => el + index + ".svg");
 
 export const TechStack = () => {
   return (
-    <StyledTechStackSection>
+    <TechStackSection id="techStack">
       <Container>
         <StyledSectionTitle>My Tech Stack</StyledSectionTitle>
-        <p>Technologies I’ve been working with recently</p>
-        <SkillList items={imgItems}/>
+        <StyledSectionSubtitle>
+          Technologies I’ve been working with recently
+        </StyledSectionSubtitle>
+        <SkillList items={imgItems} />
       </Container>
-    </StyledTechStackSection>
+    </TechStackSection>
   );
 };
 
-const StyledTechStackSection = styled.section`
-
+const TechStackSection = styled.section`
   ${StyledSectionTitle} {
     margin-bottom: 20px;
-  }
-
-
-  p {
-    font-size: ${props => props.theme.fontSize?.mediumS};
-    text-align: center;
-    margin-bottom: 140px;
   }
 `;

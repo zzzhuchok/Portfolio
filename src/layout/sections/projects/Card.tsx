@@ -1,18 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { IconSvgSprite } from "../../../components/picture/IconSvgSprite";
+import { ProjectCardType } from "./_projectCardsData";
 
-export type CardPropsType = {
-  id: number;
-  previewImg: string;
-  title: string;
-  description: string;
-  techStack: string;
-  previewLink: string;
-  codeLink: string;
-};
-
-export const Card = (props: CardPropsType) => {
+export const Card = (props: ProjectCardType) => {
   return (
     <StyledCard>
       <CardHeader>
