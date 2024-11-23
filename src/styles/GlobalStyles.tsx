@@ -6,6 +6,11 @@ interface GlobalStyleProps {
 
 export const GlobalStyles = createGlobalStyle<GlobalStyleProps>`
 
+/* * {
+  outline: 1px solid salmon;
+  outline-offset: 2px;
+} */
+
   *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -61,5 +66,18 @@ svg *
 
 section {
   margin-bottom: ${(props) => props.theme.section?.marginBottom};
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 `;

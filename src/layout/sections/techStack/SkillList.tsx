@@ -27,7 +27,11 @@ export const SkillList = (props: SkillListPropType) => {
 const StyledSkillList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 100px 80px;
+  gap: clamp(40px, 9vw ,100px) clamp(40px, 9vw ,80px);
   justify-content: center;
   align-items: center;
+
+  li {
+    max-width: 120px;
+  }
 `;

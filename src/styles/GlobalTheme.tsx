@@ -13,6 +13,7 @@ export const GlobalTheme: DefaultTheme = {
     lightLink: "#fff",
     border: "rgb(66 68 110 / 0.3)",
   },
+
   fontSize: {
     smallXS: "16px",
     smallS: "18px",
@@ -22,11 +23,11 @@ export const GlobalTheme: DefaultTheme = {
     mediumM: "48px",
     largeXS: "58px",
   },
-
   fontFamily: {
     primary: `"Poppins", sans-serif`,
     secondary: `"DM Sans", sans-serif`,
   },
+
   border: {
     radius: "20px",
   },
@@ -38,6 +39,13 @@ export const GlobalTheme: DefaultTheme = {
     duration: "0.2s",
   },
   section: {
-    marginBottom: '200px',
+    marginBottom: 'clamp(100px, 14vw,200px)',
+  },
+
+  mediaBreakpoints: {
+    deskftopXS: 'max-width: 1199.98px',
+    tablet: '(max-width: 991.98px)',
+    phone: '(max-width: 767.98px)',
+    phoneXS: '(max-width: 575.98px)',
   }
 };

@@ -7,6 +7,7 @@ export const Avatar = () => {
 };
 
 const StyledAvatar = styled.img`
+  max-width: 100%;
   height: auto;
   border-radius: 50%;
 `;

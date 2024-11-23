@@ -24,8 +24,7 @@ export const Footer = () => {
         <FooterBottom>
           <Navigation navItems={NAVIGATION_LINKS} />
           <Signature>
-            Designed and built by <span>zzzhuchok</span> with <span>Love</span>{" "}
-            & <span>Coffee</span>
+            Designed and built by{"\u00A0"}<span>zzzhuchok</span>{"\u00A0"}with{"\u00A0"}<span>Love</span>{"\u00A0"}&{"\u00A0"}<span>Coffee</span>
           </Signature>
         </FooterBottom>
       </Container>
@@ -37,36 +36,53 @@ const StyledFooter = styled.footer``;
 
 const FooterTop = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 50px;
+  flex-wrap: wrap;
+  gap: clamp(20px, 5vw, 50px);
   padding-bottom: 40px;
   border-bottom: 2px solid rgba(66, 68, 110, 0.3);
+
+  & > a {
+    margin-right: auto;
+    @media screen and (${(props) => props.theme.mediaBreakpoints?.phone}) {
+      display: none;
+    }
+  }
 `;
 
 const Contacts = styled.div`
   display: flex;
   align-items: center;
   gap: 30px;
-  margin-left: auto;
 
-a:hover {
-  color: ${props => props.theme.colors?.textTitle}
-}
+  a:hover {
+    color: ${(props) => props.theme.colors?.textTitle};
+  }
 `;
 
 const FooterBottom = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 50px;
   padding-block: 40px;
+
+  & nav {
+    margin-right: auto;
+    @media screen and (${(props) => props.theme.mediaBreakpoints?.tablet}) {
+      display: none;
+    }
+  }
 `;
 
 const Signature = styled.div`
   background-image: ${(props) => props.theme.colors?.textLinearGradient};
   background-clip: text;
+  text-align: center;
 
   span {
     color: transparent;
   }
+
 `;

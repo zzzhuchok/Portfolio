@@ -23,7 +23,16 @@ export const HomePage = () => {
 };
 
 const HomePageWrapper = styled.div`
+  display: flex;
+  flex-direction:column;
   min-height: 100vh;
   padding-block: 20px;
   background-color: ${(props) => props.theme.colors?.background};
+  overflow-x: hidden;
+
+  main {
+    flex-grow: 1;
+  }
 `;
+
+

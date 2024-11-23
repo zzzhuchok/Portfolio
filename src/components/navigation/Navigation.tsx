@@ -33,7 +33,7 @@ const StyledNavigation = styled.nav`
 
   & ul {
     display: flex;
-    column-gap: 45px;
+    column-gap: clamp(20px, 3vw, 45px);
   }
 
   & a {

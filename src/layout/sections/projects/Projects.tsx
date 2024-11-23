@@ -30,6 +30,6 @@ const ProjectCardsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 45px;
+  /* align-items: center; */
+  gap: clamp(20px, 2.5vw ,45px);
 `;

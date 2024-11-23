@@ -42,7 +42,17 @@ declare module "styled-components" {
       duration?: string;
     };
     section?: {
-      marginBottom: string;
+      marginBottom?: string;
+    };
+
+    mediaBreakpoints?: {
+      desktop?: string,
+      deskftopXS?: string,
+      tablet?: string,
+      phone?: string,
+      phoneXS?: string,
     }
+
+
   }
 }

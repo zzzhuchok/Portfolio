@@ -14,7 +14,8 @@ export const Card = (props: ProjectCardType) => {
         <StyledCardTitle>{props.title}</StyledCardTitle>
         <StyledCardDescription>{props.description}</StyledCardDescription>
         <StyledCardTags>
-          Tech stack : <span>{props.techStack}</span>
+          <span>Tech stack:</span>
+          <span>{props.techStack}</span>
         </StyledCardTags>
 
         <CardFooter>
@@ -71,6 +72,9 @@ const StyledCardTitle = styled.h3`
   font-size: ${(props) => props.theme.fontSize?.mediumXS};
   text-align: center;
   color: ${(props) => props.theme.colors?.textTitle};
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 const StyledCardDescription = styled.p`
@@ -81,10 +85,14 @@ const StyledCardDescription = styled.p`
 `;
 
 const StyledCardTags = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
   margin-bottom: 30px;
   font-size: ${(props) => props.theme.fontSize?.smallXS};
 
-  span {
+  span:nth-child(2) {
     font-weight: 300;
     font-size: 0.875em;
   }
